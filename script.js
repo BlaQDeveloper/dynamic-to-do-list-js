@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // Creating a function "addTask" that add new task to the to-do list application
     function addTask() {
-        let taskText = taskInput.value.trim();
+        const taskText = taskInput.value.trim();
 
         // checking if the taskText is not empty
         if (!taskText === "") {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
             document.createElement("li").textContent = taskText;
             // creating a remove button
             const removeButton = document.createElement("button");
-            removeButton.className = "remove-btn";
+            removeButton.classList.add = "remove-btn";
             removeButton.textContent = "Remove";
 
             // Assigning an onclick event to remove li element
