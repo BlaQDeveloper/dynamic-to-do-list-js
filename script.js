@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // Creating a function "addTask" that add new task to the to-do list application
     function addTask() {
-        let taskText = document.getElementById("task-input").value.trim()
+        let taskText = taskInput.value.trim();
 
         // checking if the taskText is not empty
         if (!taskText === "") {
