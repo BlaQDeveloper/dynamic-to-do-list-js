@@ -47,4 +47,16 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     //  This ensures your data fetching logic runs once the HTML document has fully loaded.
     document.addEventListener("DOMContentLoaded", addTask);
+
+    function checkForExistingTasks() {
+        // Logic to check for existing tasks can be implemented here
+        const tasks = localStorage.getItem("tasks");
+
+        if (tasks) {
+            return JSON.parse(tasks);
+        }
+        else {
+            return [];
+        }
+    }
 });
