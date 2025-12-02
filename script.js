@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function(){
             return JSON.parse(tasks);
         }
         else {
-            return ["loadTasks"];
+            return [];
         }
     }
 });
