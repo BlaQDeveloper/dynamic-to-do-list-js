@@ -43,7 +43,21 @@ document.addEventListener('DOMContentLoaded', function(){
             if (event.key === "Enter") {
                 addTask();
             }
+
         });
+
+        // Storing tasks in local storage
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks.push(taskText);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+
+        document.querySelectorAll(".remove-btn").forEach(function(button, index){
+            button.addEventListener("click", function(){
+                let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+                tasks.splice(index, 1);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+            });
+    });
     }
     //  This ensures your data fetching logic runs once the HTML document has fully loaded.
     document.addEventListener("DOMContentLoaded", addTask);
